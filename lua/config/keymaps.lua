@@ -15,6 +15,4 @@ vim.keymap.set("n", "<down>", function()
   print("Use j!")
 end)
 
-vim.keymap.set("n", "<F5>", function()
-  require("code_runner").run()
-end)
+vim.keymap.set("n", "<F5>", ":RunCode<CR>i", { noremap = true, silent = false })
