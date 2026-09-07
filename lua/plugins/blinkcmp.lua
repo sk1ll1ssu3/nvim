@@ -1,8 +1,10 @@
 return {
-  {
-    "saghen/blink.cmp",
-    config = function()
-      require("config.blinkcmp")
-    end,
+  "saghen/blink.cmp",
+  opts = {
+    completion = {
+      ghost_text = {
+        enabled = false,
+      },
+    },
   },
 }

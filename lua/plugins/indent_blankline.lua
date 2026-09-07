@@ -3,8 +3,7 @@ return {
   main = "ibl",
   ---@module "ibl"
   ---@type ibl.config
-  opts = {},
   config = function()
-    require("config.indent_blankline")
+    require("config.indent-blankline")
   end,
 }
