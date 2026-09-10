@@ -15,7 +15,7 @@ own repo later
 
 ```bash
   cd ~/.config/nvim/
-  git pull
+  rm -rf .git
 ```
 
 ## Update
