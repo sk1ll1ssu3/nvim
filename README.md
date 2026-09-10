@@ -4,7 +4,6 @@ My customized version of LazyVim
 
 ## Installation (Linux)
 
-```
 ```bash
   cd ~/.config
   rm -rf nvim
@@ -18,7 +17,7 @@ own repo later
   cd ~/.config/nvim/
   git pull
 ```
-```
+
 ## Update
 
 You don't need to run this if this is your own repo now
@@ -26,6 +25,4 @@ You don't need to run this if this is your own repo now
 ```bash
   cd ~/.config/nvim/
   git pull
-```
-```
 ```
