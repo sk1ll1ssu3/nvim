@@ -3,26 +3,82 @@
 -- Add any additional keymaps here
 
 -- Force HJKL
-vim.keymap.set("n", "<left>", function()
-  print("Use h!")
-end, {
-  desc = "Preventing use of arrow keys",
-})
-vim.keymap.set("n", "<right>", function()
-  print("Use l!")
-end, {
-  desc = "Preventing use of arrow keys",
-})
-vim.keymap.set("n", "<up>", function()
-  print("Use k!")
-end, {
-  desc = "Preventing use of arrow keys",
-})
-vim.keymap.set("n", "<down>", function()
-  print("Use j!")
-end, {
-  desc = "Preventing use of arrow keys",
-})
+vim.keymap.set(
+  {
+    "n",
+    "v",
+    "x",
+    "s",
+    "o",
+    "c",
+    "t",
+    "l",
+  },
+  "<left>",
+  function()
+    print("Use h!")
+  end,
+  {
+    desc = "Preventing use of arrow keys",
+  }
+)
+vim.keymap.set(
+  {
+    "n",
+    "v",
+    "x",
+    "s",
+    "o",
+    "c",
+    "t",
+    "l",
+  },
+  "<right>",
+  function()
+    print("Use l!")
+  end,
+  {
+    desc = "Preventing use of arrow keys",
+  }
+)
+vim.keymap.set(
+  {
+    "n",
+    "v",
+    "x",
+    "s",
+    "o",
+    "c",
+    "t",
+    "l",
+  },
+  "<up>",
+  function()
+    print("Use k!")
+  end,
+  {
+    desc = "Preventing use of arrow keys",
+  }
+)
+vim.keymap.set(
+  {
+    "n",
+    "v",
+    "x",
+    "s",
+    "o",
+    "c",
+    "t",
+    "l",
+  },
+  "<down>",
+  function()
+    print("Use j!")
+  end,
+  {
+    desc = "Preventing use of arrow keys",
+  }
+)
 
 -- Code Runner
 vim.keymap.set("n", "<F5>", ":RunCode<CR>i", {
@@ -32,12 +88,24 @@ vim.keymap.set("n", "<F5>", ":RunCode<CR>i", {
 })
 
 -- Debugger
-vim.keymap.set("n", "<C-F5>", "<cmd>lua require('dapui').toggle()<CR>")
-vim.keymap.set("n", "<C-b>", "<cmd>DapToggleBreakpoint<CR>")
-vim.keymap.set("n", "<C-c>", "<cmd>DapContinue<CR>")
-vim.keymap.set("n", "<C-n>", "<cmd>DapStepOver<CR>")
-vim.keymap.set("n", "<C-s>", "<cmd>DapStepInto<CR>")
-vim.keymap.set("n", "<C-f>", "<cmd>DapStepOut<CR>")
+vim.keymap.set("n", "<C-F5>", "<cmd>lua require('dapui').toggle()<CR>", {
+  desc = "Start Debugger",
+})
+vim.keymap.set("n", "<C-b>", "<cmd>DapToggleBreakpoint<CR>", {
+  desc = "Set breakpoint",
+})
+vim.keymap.set("n", "<C-c>", "<cmd>DapContinue<CR>", {
+  desc = "Continue",
+})
+vim.keymap.set("n", "<C-n>", "<cmd>DapStepOver<CR>", {
+  desc = "Step over",
+})
+vim.keymap.set("n", "<C-s>", "<cmd>DapStepInto<CR>", {
+  desc = "Step into",
+})
+vim.keymap.set("n", "<C-f>", "<cmd>DapStepOut<CR>", {
+  desc = "Step out",
+})
 
 -- yanky
 
