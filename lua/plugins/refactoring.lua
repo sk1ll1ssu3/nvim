@@ -3,5 +3,5 @@ return {
   dependencies = {
     "lewis6991/async.nvim",
   },
-  config = function() require('config.refactoring') end,
+  config = function() require("config.refactoring") end,
 }

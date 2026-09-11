@@ -1,4 +1,4 @@
-require('satellite').setup {
+require("satellite").setup {
   current_only = false,
   winblend = 50,
   zindex = 40,
@@ -8,8 +8,8 @@ require('satellite').setup {
     cursor = {
       enable = true,
       -- Supports any number of symbols
-      symbols = { '⎺', '⎻', '⎼', '⎽' }
-      -- symbols = { '⎻', '⎼' }
+      symbols = { "⎺", "⎻", "⎼", "⎽" }
+      -- symbols = { "⎻", "⎼" }
       -- Highlights:
       -- - SatelliteCursor (default links to NonText
     },
@@ -21,7 +21,7 @@ require('satellite').setup {
     },
     diagnostic = {
       enable = true,
-      signs = {'-', '=', '≡'},
+      signs = {"-", "=", "≡"},
       min_severity = vim.diagnostic.severity.HINT,
       -- Highlights:
       -- - SatelliteDiagnosticError (default links to DiagnosticError)
@@ -44,12 +44,12 @@ require('satellite').setup {
     marks = {
       enable = true,
       show_builtins = false, -- shows the builtin marks like [ ] < >
-      key = 'm'
+      key = "m"
       -- Highlights:
       -- SatelliteMark (default links to Normal)
     },
     quickfix = {
-      signs = { '-', '=', '≡' },
+      signs = { "-", "=", "≡" },
       -- Highlights:
       -- SatelliteQuickfix (default links to WarningMsg)
     }

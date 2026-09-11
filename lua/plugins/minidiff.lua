@@ -1,5 +1,5 @@
 return {
-  'nvim-mini/mini.diff',
+  "nvim-mini/mini.diff",
   version = false,
-  config = function() require('config.minidiff') end,
+  config = function() require("config.minidiff") end,
 }
