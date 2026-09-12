@@ -15,10 +15,11 @@ local setup = {
 
 dap.configurations.c = setup
 dap.configurations.cpp = setup
+codelldb_path = vim.fn.glob(vim.fn.expand("~/.vscode/extensions/vadimcn.vscode-lldb-*/adapter/codelldb"))
 
 dap.adapters.codelldb = {
   type = "executable",
-  command = vim.fn.expand("~/.local/bin/codelldb"), -- or if not in $PATH: "/absolute/path/to/codelldb"
+  command = codelldb_path, -- or if not in $PATH: "/absolute/path/to/codelldb"
 
   -- On windows you may have to uncomment this:
   -- detached = false,
