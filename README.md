@@ -1,6 +1,4 @@
-# 💤 LazyVim
-
-My customized version of LazyVim
+# My customized version of LazyVim
 
 ## Installation (Linux)
 
