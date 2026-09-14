@@ -2,18 +2,49 @@ return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
   config = function()
+    header = [[
+                    ▄▄▄▄▄▄▄▄▄▄     ▄▄▄▄▄▄▄▄▄▄                      ▄▄▄▄▄▄▄▄▄▄     ▄▄▄▄▄▄▄▄▄▄   
+░▄▄          ▄▄░ ░▄▄ ▀▐████▀▀   ░▄▄ ▀▐████▀▀   ░▄▄          ▄▄░ ░▄▄ ▀▐████▀▀   ░▄▄ ▀▀▐███▀▀ ▄▄░
+░██░░ ░░░░  ▄▐█░ ░██▀        ░░ ░██▀        ░░ ░██░░ ░░░░  ▄▐█░ ░██▀        ░░ ░██░░       ▄▐█░
+░██▒░ ░░░░ ░███░ ░██▌ ░░░░░░░░░ ░██▌ ░░░░░░░░░ ░██▒░ ░░░░ ░███░ ░██▌ ░░░░░░░░░ ░██▒░ ░░░░ ░███░
+░██▓░ ░░░░  ▐██░ ░██▀ ░░░░░░░░░ ░██▀ ░░░░░░░░░ ░██▓░ ░░░░  ▐██░ ░██▀ ░░░░░░░░░ ░██▓░ ░░░░  ▐██░
+░▀▀ ▄▄▄▄▄▄▄▄ ▀▀░ ░▒▀ ▄▄▄▄▄▄▄▄   ░▒▀  ░░░░░░░░░ ░▀▀ ▄▄▄▄▄▄▄▄ ▀▀░ ░▒▀ ▄▄▄▄▄▄▄▄   ░▀▀ ▄▄▄▄▄▄▄▄ ▀▀░
+   █▓▓█▓█████       █▓▓█▓█████░    ░░░░░░░░░░░    █▓▓█▓█████       █▓▓█▓█████░    █▓▓█▓█████   
+░█▄          ▄▄░ ░▄▄            ░▄▄  ░░░░░░░░░ ░█▄          ▄▄░ ░▄▄            ░█▄          ▄▄░
+░▓▌▄ ░░░░░ ░▀██░ ░██▌ ░░░░░░░░░ ░██▌ ░░░░░░░░░ ░▓▌▄ ░░░░░ ░▀██░ ░██▌ ░░░░░░░░░ ░▓▌▄ ░░░░░ ░▀██░
+░███ ░░░░░ ░▐██░ ░██▌ ░░░░░░░░░ ░██▌ ░░░░░░░░░ ░███ ░░░░░ ░▐██░ ░██▌ ░░░░░░░░░ ░███ ░░░░░ ░▐██░
+░█▀█ ░░░░░ ░▀█▀░ ░██▓        ░░ ░██▓        ░░ ░█▀█ ░░░░░ ░▀█▀░ ░██▓        ░░ ░█▀█ ░░░░░ ░▀█▀░
+░█▀  ░░░░░   ▀ ░ ░▒▀░▄▄▄███▄▄   ░▒▀░▄▄▄███▄▄   ░█▀  ░░░░░   ▀ ░ ░▒▀░▄▄▄███▄▄   ░█▀  ░░░░░   ▀ ░
+    ]]
     require("dashboard").setup({
-      shortcut = {
-        -- action can be a function type
-        { desc = string, group = "highlight group", key = "shortcut key", action = "action when you press key" },
+      theme = "doom",
+      config = {
+        header = vim.split(header, "\n"),
+        center = {
+          {
+            icon = " ",
+            icon_hl = "Title",
+            desc = "Find File           ",
+            desc_hl = "String",
+            key = "b",
+            keymap = "SPC f f",
+            key_hl = "Number",
+            key_format = " %s", -- remove default surrounding `[]`
+            action = "lua print(2)",
+          },
+          {
+            icon = " ",
+            desc = "Find Dotfiles",
+            key = "f",
+            keymap = "SPC f d",
+            key_format = " %s", -- remove default surrounding `[]`
+            action = "lua print(3)",
+          },
+        },
+        footer = {
+          '"First, solve the problem. Then, write the code." — John Johnson',
+        }, --your footer
       },
-      packages = { enable = true }, -- show how many plugins neovim loaded
-      -- limit how many projects list, action when you press key or enter it will run this action.
-      -- action can be a function type, e.g.
-      -- action = func(path) vim.cmd('Telescope find_files cwd=' .. path) end
-      project = { enable = true, limit = 8, icon = "your icon", label = "", action = "Telescope find_files cwd=" },
-      mru = { enable = true, limit = 10, icon = "your icon", label = "", cwd_only = false },
-      footer = {}, -- footer
     })
   end,
   dependencies = { { "nvim-tree/nvim-web-devicons" } },
