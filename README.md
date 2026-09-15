@@ -24,3 +24,7 @@ You don't need to run this if this is your own repo now
   cd ~/.config/nvim/
   git pull
 ```
+
+## More customization
+
+You can check out <a href="https://www.lazyvim.org/">LazyVim</a>
