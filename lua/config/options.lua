@@ -15,9 +15,4 @@ vim.opt.splitbelow = true
 if vim.g.neovide then
   vim.g.neovide_scroll_animation_length = 0.3
   vim.g.neovide_scroll_animation_far_lines = 1
-  vim.g.neovide_theme = "light"
 end
-
--- Neovim
-
-vim.o.background = "light"
