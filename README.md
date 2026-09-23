@@ -28,3 +28,7 @@ You don't need to run this if this is your own repo now
 ## More customization
 
 You can check out <a href="https://www.lazyvim.org/">LazyVim</a>
+
+## My current ----------
+
+I did many failed attempts to install firenvim. I just want not to spend another holiday trying to install it
