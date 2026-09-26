@@ -13,6 +13,8 @@ vim.opt.splitbelow = true
 -- Neovide
 
 if vim.g.neovide then
+  vim.g.neovide_opacity = 0.88
+  vim.g.neovide_normal_opacity = 0.88
   vim.g.neovide_scroll_animation_length = 0.3
   vim.g.neovide_scroll_animation_far_lines = 1
 end
