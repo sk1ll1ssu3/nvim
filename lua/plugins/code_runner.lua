@@ -16,6 +16,6 @@ return {
         },
       }
     end,
+    lazy = false,
   },
-  lazy = false,
 }
